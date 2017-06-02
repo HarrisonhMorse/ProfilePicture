@@ -1,4 +1,4 @@
-// modification of P_4_3_2_01.pde
+
 // at https://github.com/generative-design/Code-Package-Processing-3.x/
 //    blob/master/01_P/P_4_3_2_01/P_4_3_2_01.pde
 // Licensed under the Apache License, Version 2.0
@@ -35,8 +35,8 @@ void draw() {
     // start both of these loops at 0.
     // one should run while its variable is less than imgHeight,
     // and the other should run while its variable is less than imgWidth
-    for(int y = ___; _________; y += cellSize) {
-      for(int x = ___; _________; x += cellSize) { 
+  
+      for(int x = 0; x<imgWidth; x += cellSize) { 
         color c = img.pixels[y*imgWidth+x];
         int greyness = round(red(c) * 0.222 + green(c) * 0.707 + blue(c) * 0.071);
         fill(c);
@@ -44,12 +44,12 @@ void draw() {
         float yLoc = y * scale;
         float size = cellSize * scale;
         // draw an ellipse at xLoc, yLoc, using 'size' for width and height
-        _________________________;
+ellipse(xLoc,yLoc,size,size);
 
       }
     }
   }
-}
+
 
 void keyPressed() {
   if (key == ' ') {
